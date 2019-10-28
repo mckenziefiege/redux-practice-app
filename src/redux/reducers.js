@@ -4,13 +4,10 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-      // case 'ADD_TODO':
-      //   return [
-      //     ...state,
-      //     [
-      //       ...state, action.payload
-      //     ]
-      //   ]
+      case 'LOAD_TODOS':
+        return {
+          ...state, todos: action.payload
+        }
       default:
         return state
     }
